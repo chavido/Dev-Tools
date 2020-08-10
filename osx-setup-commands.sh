@@ -12,8 +12,9 @@
 #make a new directory for development
 mkdir ~/Dev
 
-##TODO
 #copy dev-tools repo from your github
+cd ~/Dev
+git clone https://github.com/chavido/Dev-Tools.git
 
 #install powerline fonts
 cd ~/Dev
@@ -35,17 +36,9 @@ brew update
 #install iterm2, a terminal replacement
 brew cask install iterm2
 ## update iterm2 settings -> colors, keep directory open new shell, keyboard shortcuts
-## Maybe do this if you want to keep bash? brew install bash # latest version of bash
-# set brew bash as default shell
 
 brew install fortune
 brew install cowsay 
-#install GIT and set up
-brew install git
-git config --global user.name "chavido"
-git config --global user.email "cvidovcich@gmail.com"
-git config --global user.name
-git config --global user.email
 
 brew install vcprompt
 ## update bash_profile
@@ -66,3 +59,10 @@ brew cask install firefox
 brew cask install visual-studio-code
 # update vscode settings
 # install vscode extensions 
+
+#install GIT and set up
+brew install git
+git config --global user.name "chavido"
+git config --global user.email "cvidovcich@gmail.com"
+git config --global user.name
+git config --global user.email
