@@ -37,8 +37,14 @@ brew update
 brew cask install iterm2
 ## update iterm2 settings -> colors, keep directory open new shell, keyboard shortcuts
 
-brew install fortune
+##brew install fortune (replaced by motivate)
 brew install cowsay 
+
+#Install Motivate https://github.com/mubaris/motivate
+git clone https://github.com/mubaris/motivate.git ~/Dev/motivate
+sudo ~/Dev/motivate/motivate/install.sh
+source ~/.zshrc
+rm -rf ~/Dev/motivate
 
 brew install vcprompt
 ## update bash_profile
@@ -48,6 +54,10 @@ brew cask install spectacle
 #install alfred, a spotlight replacement
 brew cask install alfred
 # set CMD+space to launch alfred
+
+#install beardspice for controlling spotify instead of itunes
+brew cask install beardedspice
+
 #install firefox
 brew cask install firefox
 # install nvm/node
@@ -59,6 +69,15 @@ brew cask install firefox
 brew cask install visual-studio-code
 # update vscode settings
 # install vscode extensions 
+
+#set dock to only show active applications
+defaults write com.apple.dock static-only -bool TRUE; killall Dock
+#set dock to show hidden applications
+defaults write com.apple.dock showhidden -bool TRUE; killall Dock
+#set dock to suck effect
+defaults write com.apple.dock mineffect suck; killall Dock
+##reset dock to defaults
+#defaults delete com.apple.dock; killall Dock
 
 #install GIT and set up
 brew install git

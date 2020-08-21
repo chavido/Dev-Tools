@@ -106,4 +106,4 @@ function mkcd () {
     }
 
 #Print a fortune on shell load
-fortune | cowsay -W 50 -f tux
+motivate | cowsay -W 50 -f tux
