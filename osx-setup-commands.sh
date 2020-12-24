@@ -8,6 +8,27 @@
 # Code Editor Extensions
 # Break timer and Flux
 
+#set dock to only show active applications
+defaults write com.apple.dock static-only -bool TRUE; killall Dock
+#set dock to show hidden applications
+defaults write com.apple.dock showhidden -bool TRUE; killall Dock
+#set dock to suck effect
+defaults write com.apple.dock mineffect suck; killall Dock
+##reset dock to defaults
+#defaults delete com.apple.dock; killall Dock
+
+#install xcode
+xcode-select --install
+#install homebrew, update
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+
+#install GIT and set up
+brew install git
+git config --global user.name "chavido"
+git config --global user.email "cvidovcich@gmail.com"
+git config --global user.name
+git config --global user.email
 
 #make a new directory for development
 mkdir ~/Dev
@@ -24,18 +45,13 @@ cd fonts
 cd ..
 rm -rf fonts
 
-#setup shell interface
-cp ~/.zshrc ~/.zshrc.backup
-cp ~/Dev/Dev-Tools/.zshrc.customTemplate ~/.zshrc
-
-#install xcode
-xcode-select --install
-#install homebrew, update
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
 #install iterm2, a terminal replacement
 brew cask install iterm2
 ## update iterm2 settings -> colors, keep directory open new shell, keyboard shortcuts
+
+#setup shell interface
+cp ~/.zshrc ~/.zshrc.backup
+cp ~/Dev/Dev-Tools/.zshrc.customTemplate ~/.zshrc
 
 ##brew install fortune (replaced by motivate)
 brew install cowsay 
@@ -70,18 +86,8 @@ brew cask install visual-studio-code
 # update vscode settings
 # install vscode extensions 
 
-#set dock to only show active applications
-defaults write com.apple.dock static-only -bool TRUE; killall Dock
-#set dock to show hidden applications
-defaults write com.apple.dock showhidden -bool TRUE; killall Dock
-#set dock to suck effect
-defaults write com.apple.dock mineffect suck; killall Dock
-##reset dock to defaults
-#defaults delete com.apple.dock; killall Dock
+#install break timer https://github.com/hovancik/stretchly
+brew cask install stretchly
 
-#install GIT and set up
-brew install git
-git config --global user.name "chavido"
-git config --global user.email "cvidovcich@gmail.com"
-git config --global user.name
-git config --global user.email
+#install smcFanControl
+brew cask install smcfancontrol
