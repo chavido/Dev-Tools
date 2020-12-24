@@ -46,7 +46,7 @@ cd ..
 rm -rf fonts
 
 #install iterm2, a terminal replacement
-brew cask install iterm2
+brew install iterm2
 ## update iterm2 settings -> colors, keep directory open new shell, keyboard shortcuts
 
 #setup shell interface
@@ -66,28 +66,28 @@ brew install vcprompt
 ## update bash_profile
 #or update vsh profile. Look into this. 
 #install spectacle, a window manager
-brew cask install spectacle
+brew install spectacle
 #install alfred, a spotlight replacement
-brew cask install alfred
+brew install alfred
 # set CMD+space to launch alfred
 
 #install beardspice for controlling spotify instead of itunes
-brew cask install beardedspice
+brew install beardedspice
 
 #install firefox
-brew cask install firefox
+brew install firefox
 # install nvm/node
 #maybe? curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 #maybe? nvm install stable
 #install lite-server and eslint
 ##npm install -g lite-server eslint
 #install VS Code
-brew cask install visual-studio-code
+brew install visual-studio-code
 # update vscode settings
 # install vscode extensions 
 
 #install break timer https://github.com/hovancik/stretchly
-brew cask install stretchly
+brew install stretchly
 
 #install smcFanControl
-brew cask install smcfancontrol
+brew install smcfancontrol
